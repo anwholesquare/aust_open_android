@@ -86,6 +86,7 @@
             android:layout_width="100dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="10dp"
+            android:id="@+id/vacantBtn"
             android:layout_height="100dp">
 
             <LinearLayout
@@ -127,6 +128,7 @@
             android:layout_width="100dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="10dp"
+            android:id="@+id/noticeBtn"
             android:layout_height="100dp">
 
             <LinearLayout
@@ -169,6 +171,7 @@
             android:layout_width="100dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="10dp"
+            android:id="@+id/infoBtn"
             android:layout_height="100dp">
 
             <LinearLayout
@@ -219,6 +222,7 @@
             android:layout_width="100dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="10dp"
+            android:id="@+id/routineBtn"
             android:layout_height="100dp">
 
             <LinearLayout
@@ -260,6 +264,7 @@
             android:layout_width="100dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="10dp"
+            android:id="@+id/busBtn"
             android:layout_height="100dp">
 
             <LinearLayout
@@ -302,6 +307,7 @@
             android:layout_width="100dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="10dp"
+            android:id="@+id/accBtn"
             android:layout_height="100dp">
 
             <LinearLayout
