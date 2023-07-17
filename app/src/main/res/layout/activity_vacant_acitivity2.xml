@@ -52,6 +52,73 @@
         android:layout_height="wrap_content">
     </LinearLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:hint="Floor No"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+
+
+
+        <AutoCompleteTextView
+            android:id="@+id/FloorDropDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/circle_tag"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AVAILABLE"
+            android:paddingLeft="5dp"
+            android:paddingRight="20dp"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/circle_tag_red"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOT AVAILABLE"
+            android:padding="5dp"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+
+
+
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -67,11 +134,11 @@
                android:orientation="horizontal">
 
                <androidx.cardview.widget.CardView
-                   android:layout_width="150dp"
+                   android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
                    android:id="@+id/room1Btn"
-                   android:layout_height="150dp"
+                   android:layout_height="120dp"
                    app:cardBackgroundColor="@color/green">
                    <LinearLayout
                        android:layout_width="match_parent"
@@ -91,11 +158,11 @@
                    </LinearLayout>
                </androidx.cardview.widget.CardView>
                <androidx.cardview.widget.CardView
-                   android:layout_width="150dp"
+                   android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
                    android:id="@+id/room2Btn"
-                   android:layout_height="150dp"
+                   android:layout_height="120dp"
                    app:cardBackgroundColor="@color/red">
                    <LinearLayout
                        android:layout_width="match_parent"
@@ -111,7 +178,7 @@
                            android:textFontWeight="600"
                            android:padding="0dp"
                            android:fontFamily="@font/poppins"
-                           android:text="7A03"/>
+                           android:text="7A04"/>
                    </LinearLayout>
                </androidx.cardview.widget.CardView>
 
@@ -123,11 +190,11 @@
                android:orientation="horizontal">
 
                <androidx.cardview.widget.CardView
-                   android:layout_width="150dp"
+                   android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
                    android:id="@+id/room5Btn"
-                   android:layout_height="150dp"
+                   android:layout_height="120dp"
                    app:cardBackgroundColor="@color/red">
                    <LinearLayout
                        android:layout_width="match_parent"
@@ -143,15 +210,15 @@
                            android:textFontWeight="600"
                            android:padding="0dp"
                            android:fontFamily="@font/poppins"
-                           android:text="7A03"/>
+                           android:text="7A05"/>
                    </LinearLayout>
                </androidx.cardview.widget.CardView>
                <androidx.cardview.widget.CardView
-                   android:layout_width="150dp"
+                   android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
                    android:id="@+id/room6Btn"
-                   android:layout_height="150dp"
+                   android:layout_height="120dp"
                    app:cardBackgroundColor="@color/green">
                    <LinearLayout
                        android:layout_width="match_parent"
@@ -167,7 +234,7 @@
                            android:textFontWeight="600"
                            android:padding="0dp"
                            android:fontFamily="@font/poppins"
-                           android:text="7A03"/>
+                           android:text="7A06"/>
                    </LinearLayout>
                </androidx.cardview.widget.CardView>
 
@@ -179,11 +246,11 @@
                android:orientation="horizontal">
 
                <androidx.cardview.widget.CardView
-                   android:layout_width="150dp"
+                   android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
                    android:id="@+id/room7Btn"
-                   android:layout_height="150dp"
+                   android:layout_height="120dp"
                    app:cardBackgroundColor="@color/green">
                    <LinearLayout
                        android:layout_width="match_parent"
@@ -199,15 +266,15 @@
                            android:textFontWeight="600"
                            android:padding="0dp"
                            android:fontFamily="@font/poppins"
-                           android:text="7A03"/>
+                           android:text="7A07"/>
                    </LinearLayout>
                </androidx.cardview.widget.CardView>
                <androidx.cardview.widget.CardView
-                   android:layout_width="150dp"
+                   android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
                    android:id="@+id/room8Btn"
-                   android:layout_height="150dp"
+                   android:layout_height="120dp"
                    app:cardBackgroundColor="@color/red">
                    <LinearLayout
                        android:layout_width="match_parent"
@@ -223,7 +290,7 @@
                            android:textFontWeight="600"
                            android:padding="0dp"
                            android:fontFamily="@font/poppins"
-                           android:text="7A03"/>
+                           android:text="7B01"/>
                    </LinearLayout>
                </androidx.cardview.widget.CardView>
 
@@ -235,11 +302,11 @@
                android:orientation="horizontal">
 
                <androidx.cardview.widget.CardView
-                   android:layout_width="150dp"
+                   android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
                    android:id="@+id/room3Btn"
-                   android:layout_height="150dp"
+                   android:layout_height="120dp"
                    app:cardBackgroundColor="@color/green">
                    <LinearLayout
                        android:layout_width="match_parent"
@@ -255,15 +322,15 @@
                            android:textFontWeight="600"
                            android:padding="0dp"
                            android:fontFamily="@font/poppins"
-                           android:text="7A03"/>
+                           android:text="7B02"/>
                    </LinearLayout>
                </androidx.cardview.widget.CardView>
                <androidx.cardview.widget.CardView
-                   android:layout_width="150dp"
+                   android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
                    android:id="@+id/room4Btn"
-                   android:layout_height="150dp"
+                   android:layout_height="120dp"
                    app:cardBackgroundColor="@color/red">
                    <LinearLayout
                        android:layout_width="match_parent"
@@ -279,7 +346,7 @@
                            android:textFontWeight="600"
                            android:padding="0dp"
                            android:fontFamily="@font/poppins"
-                           android:text="7A03"/>
+                           android:text="7B03"/>
                    </LinearLayout>
                </androidx.cardview.widget.CardView>
 
