@@ -1,2 +1,2 @@
 # AUST OPEN ANDROID APP
-Your Campus Companion for Seamless Excellence!
+Your Campus Companion for Seamless Excellence!!! .
