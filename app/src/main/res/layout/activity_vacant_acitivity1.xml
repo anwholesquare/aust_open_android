@@ -1,9 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VacantAcitivity1">
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="start"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/hamburger1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/applogo"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:padding="5dp"
+            >
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="start"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tvTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins"
+            android:text="VACANT CLASSES"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/green"
+                android:id="@+id/f9thBtn"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9th Floor"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins"
+                    android:textFontWeight="500"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/green"
+                android:id="@+id/f8thBtn"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8th Floor"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins"
+                    android:textFontWeight="500"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/green"
+                android:id="@+id/f7thBtn"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7th Floor"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins"
+                    android:textFontWeight="500"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/green"
+                android:id="@+id/f6thBtn"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6th Floor"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins"
+                    android:textFontWeight="500"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/green"
+                android:id="@+id/f5thBtn"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5th Floor"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins"
+                    android:textFontWeight="500"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/green"
+                android:id="@+id/f4thBtn"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4th Floor"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins"
+                    android:textFontWeight="500"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/green"
+                android:id="@+id/f3rdBtn"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3rd Floor"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins"
+                    android:textFontWeight="500"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/green"
+                android:id="@+id/f2ndBtn"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2nd Floor"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins"
+                    android:textFontWeight="500"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/green"
+                android:id="@+id/f1stBtn"
+                android:layout_marginBottom="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1st Floor"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins"
+                    android:textFontWeight="500"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
