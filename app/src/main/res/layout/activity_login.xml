@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical"
+        android:gravity="center"
         >
 
         <ImageView
@@ -26,7 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Your Campus Companion for Seamless Excellence!"
-            android:textSize="14sp"
+            android:textSize="12sp"
+            android:textAlignment="center"
             android:textColor="@color/black"></TextView>
     </LinearLayout>
     <LinearLayout
@@ -59,7 +61,7 @@
             android:textSize="14sp"
             android:fontFamily="@font/poppins_semi_bold"
             android:textFontWeight="600"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="200dp"
 
             android:text="Guest Login"/>
     </LinearLayout>
