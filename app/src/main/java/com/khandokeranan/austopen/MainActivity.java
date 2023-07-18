@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +15,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView signOutBtn = (TextView) findViewById(R.id.signoutBtn);
+        signOutBtn.setOnClickListener(v -> {
+            Intent vc1 = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(vc1);
+        });
+
 
         CardView vacantBtn = (CardView) findViewById(R.id.vacantBtn);
         vacantBtn.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(vc1);
             }
         });
+
 
 
         CardView routineBtn = (CardView) findViewById(R.id.routineBtn);

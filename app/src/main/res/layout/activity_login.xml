@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="150dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/applogo" />
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Campus Companion for Seamless Excellence!"
+            android:textSize="14sp"
+            android:textColor="@color/black"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="100dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In With"
+            android:textSize="20sp"
+            android:textFontWeight="600"
+            android:textColor="@color/black"></TextView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/google_logo"
+            ></ImageView>
+
+
+
+        <TextView
+            android:id="@+id/guestLoginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="20sp"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textFontWeight="600"
+            android:layout_marginTop="150dp"
+
+            android:text="Guest Login"/>
+    </LinearLayout>
+</LinearLayout>
