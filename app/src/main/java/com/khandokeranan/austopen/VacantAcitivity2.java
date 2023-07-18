@@ -1,7 +1,9 @@
 package com.khandokeranan.austopen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,6 +27,17 @@ public class VacantAcitivity2 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), floorText.getText().toString(), Toast.LENGTH_SHORT);
+
+            }
+
+        });
+
+        CardView roomBtn = (CardView) findViewById(R.id.room1Btn);
+        roomBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent vc1 = new Intent(getApplicationContext(), VacantAcitivity3.class);
+                startActivity(vc1);
             }
         });
      }
