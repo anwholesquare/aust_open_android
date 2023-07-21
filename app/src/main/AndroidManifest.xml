@@ -15,6 +15,15 @@
         android:theme="@style/Theme.AUSTOPEN"
         tools:targetApi="31">
         <activity
+            android:name=".BusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TeacherInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".RoutineActivity2"
             android:exported="false" />
         <activity
