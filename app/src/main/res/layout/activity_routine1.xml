@@ -101,10 +101,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <LinearLayout
-                        android:layout_width="180dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginTop="10dp"
+
                         android:layout_marginRight="10dp"
                         >
                         <TextView
@@ -119,7 +120,7 @@
                         <com.google.android.material.textfield.TextInputLayout
 
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                            android:layout_width="180dp"
+                            android:layout_width="130dp"
                             android:layout_height="wrap_content"
                             android:hint="Year"
                             android:layout_gravity="start"
@@ -136,7 +137,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:layout_width="180dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginTop="10dp"
@@ -153,7 +154,7 @@
                         <com.google.android.material.textfield.TextInputLayout
 
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                            android:layout_width="180dp"
+                            android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:hint="Semester"
                             android:layout_gravity="start"
@@ -169,17 +170,13 @@
 
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
-
-
-
-
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <LinearLayout
-                        android:layout_width="180dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginTop="10dp"
@@ -197,7 +194,7 @@
                         <com.google.android.material.textfield.TextInputLayout
 
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                            android:layout_width="180dp"
+                            android:layout_width="130dp"
                             android:layout_height="wrap_content"
                             android:hint="Section"
                             android:layout_gravity="start"
@@ -214,7 +211,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:layout_width="180dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginTop="10dp"
@@ -231,7 +228,7 @@
                         <com.google.android.material.textfield.TextInputLayout
 
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                            android:layout_width="180dp"
+                            android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:hint="Group"
                             android:layout_gravity="start"
