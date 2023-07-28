@@ -45,8 +45,9 @@ public class LoginActivity extends AppCompatActivity {
         googleLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = clint.getSignInIntent();
-                startActivityForResult(i, 1234);
+//                Intent i = clint.getSignInIntent();
+//                startActivityForResult(i, 1234);
+                signOutAndStartGoogleSignIn();
             }
         });
 
@@ -55,41 +56,44 @@ public class LoginActivity extends AppCompatActivity {
         guestLoginBtn.setOnClickListener(v -> {
             Intent vc1 = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(vc1);
-
         });
     }
-
+    //Google sign in with @aust.edu
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==1234){
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            try {
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-
-                AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
-
-                FirebaseAuth.getInstance().signInWithCredential(credential)
+            try{
+                GoogleSignInAccount account = task.getResult(ApiException.class); //get the account
+                AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null); //get the credential
+                FirebaseAuth.getInstance().signInWithCredential(credential) //sign in with credential
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isComplete()){
-                                    String firstName = account.getGivenName();
-
+                                //if sign in is successful
+                                if(task.isSuccessful()){
                                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-                                    System.out.println(firstName);
-                                    Intent vc1 = new Intent(getApplicationContext(), MainActivity.class);
-                                    startActivity(vc1);
+                                    String email = user.getEmail();
+                                    if(email.contains("@aust.edu")){
+                                        Intent vc1 = new Intent(getApplicationContext(), MainActivity.class);
+                                        startActivity(vc1);
+                                    }
+                                    else{
+                                        Toast.makeText(LoginActivity.this, "Please use your aust email\nOr Login as a Guest", Toast.LENGTH_SHORT).show();
+                                        FirebaseAuth.getInstance().signOut();
+                                    }
                                 }
                                 else{
-                                    Toast.makeText(LoginActivity.this,task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
-            } catch (ApiException e) {
-                throw new RuntimeException(e);
             }
+            catch (Exception e){
+                Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show();
+            }
+
         }
     }
 
@@ -98,9 +102,28 @@ public class LoginActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user!=null){
-            System.out.println(user.getDisplayName());
             Intent vc1 = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(vc1);
         }
+    }
+
+
+    private void signOutAndStartGoogleSignIn() {
+        clint.signOut()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        // After signing out, revoke access to clear the Google Sign-In cache
+                        clint.revokeAccess()
+                                .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        // Start Google Sign-In flow
+                                        Intent i = clint.getSignInIntent();
+                                        startActivityForResult(i, 1234);
+                                    }
+                                });
+                    }
+                });
     }
 }
