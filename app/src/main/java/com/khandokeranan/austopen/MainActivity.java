@@ -9,19 +9,34 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
+
+    FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        user = FirebaseAuth.getInstance().getCurrentUser();
+
+        // User is logged in already
+        if(user != null){
+            TextView userName = (TextView) findViewById(R.id.username);
+            userName.setText("HEY " + user.getDisplayName());
+        }
+
+        //
         TextView signOutBtn = (TextView) findViewById(R.id.signoutBtn);
         signOutBtn.setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();
             Intent vc1 = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(vc1);
         });
-
 
         CardView vacantBtn = (CardView) findViewById(R.id.vacantBtn);
         vacantBtn.setOnClickListener(new View.OnClickListener() {
@@ -84,10 +99,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(vc1);
             }
         });
-
-
-
-
-
     }
 }

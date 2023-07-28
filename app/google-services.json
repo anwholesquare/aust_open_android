@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "527928973031",
+    "project_id": "aust-open",
+    "storage_bucket": "aust-open.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527928973031:android:a0953336b1a374d35ab442",
+        "android_client_info": {
+          "package_name": "com.khandokeranan.austopen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527928973031-g1kv76a7743inj1p5cadqffgv2k1in3t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIruCtNmcVafFt_OjHnwYe5UziEIcWrQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527928973031-g1kv76a7743inj1p5cadqffgv2k1in3t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
