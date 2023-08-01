@@ -23,6 +23,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.DocumentSnapshot;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
     private ImageView googleLoginBtn;
@@ -75,9 +79,27 @@ public class LoginActivity extends AppCompatActivity {
                                 if(task.isSuccessful()){
                                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                                     String email = user.getEmail();
-                                    if(email.contains("@aust.edu")){
-                                        Intent vc1 = new Intent(getApplicationContext(), MainActivity.class);
-                                        startActivity(vc1);
+                                    if(email.contains("@aust.edu")){FirestoreHelper firestoreHelper = new FirestoreHelper();
+                                        firestoreHelper.checkIfEmailExists(email, new FirestoreHelper.OnEmailCheckListener() {
+                                            @Override
+                                            public void onEmailExists(DocumentSnapshot document) {
+                                                Intent vc1 = new Intent(getApplicationContext(), MainActivity.class);
+                                                startActivity(vc1);
+                                            }
+                                            @Override
+                                            public void onEmailNotExists() {
+                                                firestoreHelper.addUserWithEmail(email);
+                                                Intent vc1 = new Intent(getApplicationContext(), MainActivity.class);
+                                                startActivity(vc1);
+                                            }
+                                            @Override
+                                            public void onQueryError(Exception e) {
+                                                Intent vc1 = new Intent(getApplicationContext(), MainActivity.class);
+                                                startActivity(vc1);
+                                            }
+                                        });
+
+
                                     }
                                     else{
                                         Toast.makeText(LoginActivity.this, "Please use your aust email\nOr Login as a Guest", Toast.LENGTH_SHORT).show();
