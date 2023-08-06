@@ -60,6 +60,7 @@
             android:text="Job Advertisement for SusLeathe Project"
             android:textColor="@color/black"
             android:textSize="20sp"
+            android:id="@+id/noticeTitle"
             android:textStyle="bold" />
 
         <TextView
@@ -69,6 +70,7 @@
             android:text="Posted on 12/12/2023"
             android:textColor="@color/green"
             android:textFontWeight="800"
+            android:id="@+id/noticeDate"
             android:textSize="15sp">
 
 
