@@ -216,33 +216,7 @@
                         android:orientation="vertical"
                         android:layout_marginTop="10dp"
                         >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins"
-                            android:padding="0dp"
-                            android:text="Group"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"/>
-                        <com.google.android.material.textfield.TextInputLayout
 
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:hint="Group"
-                            android:layout_gravity="start"
-                            android:orientation="horizontal"
-                            >
-                            <AutoCompleteTextView
-                                android:id="@+id/groupDropDown"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:textFontWeight="600"
-
-                                android:inputType="none"/>
-
-                        </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
 
 

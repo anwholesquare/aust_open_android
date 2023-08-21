@@ -55,8 +55,8 @@ public class NoticeActivity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice1);
 
-        Log.d("anan-log", "START NOTICING");
-        System.out.println("noticing");
+//        Log.d("anan-log", "START NOTICING");
+//        System.out.println("noticing");
 
         noticeLinear = (LinearLayout) findViewById(R.id.noticeLinearLayout);
 

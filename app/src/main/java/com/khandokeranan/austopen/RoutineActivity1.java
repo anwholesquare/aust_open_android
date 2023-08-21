@@ -10,8 +10,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
+import android.util.Log;
 
 public class RoutineActivity1 extends AppCompatActivity {
+    String deptVal, yearVal, semVal, secVal,finderVal;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,18 @@ public class RoutineActivity1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent vc1 = new Intent(getApplicationContext(), RoutineActivity2.class);
+                if(deptVal == null || yearVal == null || semVal == null || secVal == null){
+                    Toast.makeText(getApplicationContext(), "Please fill all the fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                finderVal = deptVal + yearVal + semVal + secVal;
+                finderVal = finderVal.toLowerCase();
+                Log.d("habib", "onClick: " + finderVal);
+                vc1.putExtra("finderVal", finderVal);
+                vc1.putExtra("deptVal", deptVal);
+                vc1.putExtra("yearVal", yearVal);
+                vc1.putExtra("semVal", semVal);
+                vc1.putExtra("secVal", secVal);
                 startActivity(vc1);
             }
         });
@@ -37,7 +52,7 @@ public class RoutineActivity1 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), deptText.getText().toString(), Toast.LENGTH_SHORT);
-
+                deptVal = deptText.getText().toString();
             }
 
         });
@@ -50,7 +65,10 @@ public class RoutineActivity1 extends AppCompatActivity {
         yearText.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 Toast.makeText(getApplicationContext(), yearText.getText().toString(), Toast.LENGTH_SHORT);
+                yearVal = yearText.getText().toString();
+                yearVal = yearVal.substring(0,1);
 
             }
 
@@ -65,7 +83,8 @@ public class RoutineActivity1 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), semText.getText().toString(), Toast.LENGTH_SHORT);
-
+                semVal = semText.getText().toString();
+                semVal = semVal.substring(0,1);
             }
 
         });
@@ -78,23 +97,11 @@ public class RoutineActivity1 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), secText.getText().toString(), Toast.LENGTH_SHORT);
-
+                secVal = secText.getText().toString();
             }
 
         });
-        String[] group = new String[] {"1", "2"};
-        ArrayAdapter<String> groupAdapter = new ArrayAdapter<>(getApplicationContext(), R.layout.dropdown_items, group);
 
-        AutoCompleteTextView groupText = (AutoCompleteTextView) findViewById(R.id.groupDropDown);
-        groupText.setAdapter(groupAdapter);
-        groupText.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), groupText.getText().toString(), Toast.LENGTH_SHORT);
-
-            }
-
-        });
     }
 
 }
