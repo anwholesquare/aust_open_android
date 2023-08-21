@@ -3,14 +3,20 @@ package com.khandokeranan.austopen;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.util.Log;
+
+import org.w3c.dom.Text;
 
 public class RoutineActivity1 extends AppCompatActivity {
     String deptVal, yearVal, semVal, secVal,finderVal;
@@ -101,6 +107,33 @@ public class RoutineActivity1 extends AppCompatActivity {
             }
 
         });
+
+        LinearLayout subsLayout = (LinearLayout)  findViewById(R.id.subsLayout);
+        TextView subtext = (TextView) findViewById(R.id.subsText);
+        CardView unsubBtn = (CardView) findViewById(R.id.unsubBtn);
+        SharedPreferences sharedPreferences = getSharedPreferences("AUSTOPEN", Context.MODE_PRIVATE);
+        String deptSub = sharedPreferences.getString("deptVal", "-1");
+        String yearSub = sharedPreferences.getString("yearVal", "-1");
+        String semesterSub = sharedPreferences.getString("semVal", "-1");
+        String sectionSub = sharedPreferences.getString("secVal", "-1");
+        if (deptSub == "-1") {
+            subsLayout.removeAllViews();
+        }else {
+            subtext.setText("SUBSCRIBED ROUTINE: " + deptSub + " " + yearSub + "." + semesterSub + " " + sectionSub );
+            unsubBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    subsLayout.removeAllViews();
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("deptVal", "-1");
+                    editor.putString("yearVal", "-1");
+                    editor.putString("semVal",  "-1");
+                    editor.putString("secVal",  "-1");
+                    editor.apply();
+                }
+            });
+        }
+
 
     }
 
