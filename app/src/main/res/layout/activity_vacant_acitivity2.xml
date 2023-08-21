@@ -57,7 +57,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:hint="Floor No"
+        android:hint="Department"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
         android:layout_gravity="center"
@@ -65,12 +65,11 @@
         >
 
 
-
         <AutoCompleteTextView
             android:id="@+id/FloorDropDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"/>
+            android:inputType="none" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -137,7 +136,63 @@
                    android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
-                   android:id="@+id/room1Btn"
+                   android:id="@+id/R7A01Btn"
+                   android:layout_height="120dp"
+                   app:cardBackgroundColor="@color/green">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="vertical"
+                       android:gravity="center"
+                       >
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="15sp"
+                           android:textColor="@color/white"
+                           android:textFontWeight="600"
+                           android:padding="0dp"
+                           android:fontFamily="@font/poppins"
+                           android:text="7A01"/>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+               <androidx.cardview.widget.CardView
+                   android:layout_width="120dp"
+                   android:layout_margin="10dp"
+                   app:cardCornerRadius="10dp"
+                   android:id="@+id/R7A02Btn"
+                   android:layout_height="120dp"
+                   app:cardBackgroundColor="@color/green">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="vertical"
+                       android:gravity="center"
+                       >
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="15sp"
+                           android:textColor="@color/white"
+                           android:textFontWeight="600"
+                           android:padding="0dp"
+                           android:fontFamily="@font/poppins"
+                           android:text="7A02"/>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:orientation="horizontal">
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="120dp"
+                   android:layout_margin="10dp"
+                   app:cardCornerRadius="10dp"
+                   android:id="@+id/R7A03Btn"
                    android:layout_height="120dp"
                    app:cardBackgroundColor="@color/green">
                    <LinearLayout
@@ -161,9 +216,9 @@
                    android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
-                   android:id="@+id/room2Btn"
+                   android:id="@+id/R7A04Btn"
                    android:layout_height="120dp"
-                   app:cardBackgroundColor="@color/red">
+                   app:cardBackgroundColor="@color/green">
                    <LinearLayout
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -193,9 +248,9 @@
                    android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
-                   android:id="@+id/room5Btn"
+                   android:id="@+id/R7A05Btn"
                    android:layout_height="120dp"
-                   app:cardBackgroundColor="@color/red">
+                   app:cardBackgroundColor="@color/green">
                    <LinearLayout
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -217,7 +272,7 @@
                    android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
-                   android:id="@+id/room6Btn"
+                   android:id="@+id/R7A06Btn"
                    android:layout_height="120dp"
                    app:cardBackgroundColor="@color/green">
                    <LinearLayout
@@ -249,7 +304,7 @@
                    android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
-                   android:id="@+id/room7Btn"
+                   android:id="@+id/R7A07Btn"
                    android:layout_height="120dp"
                    app:cardBackgroundColor="@color/green">
                    <LinearLayout
@@ -273,9 +328,9 @@
                    android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
-                   android:id="@+id/room8Btn"
+                   android:id="@+id/R7B01Btn"
                    android:layout_height="120dp"
-                   app:cardBackgroundColor="@color/red">
+                   app:cardBackgroundColor="@color/green">
                    <LinearLayout
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -295,6 +350,7 @@
                </androidx.cardview.widget.CardView>
 
            </LinearLayout>
+
            <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
@@ -305,7 +361,7 @@
                    android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
-                   android:id="@+id/room3Btn"
+                   android:id="@+id/R7B02Btn"
                    android:layout_height="120dp"
                    app:cardBackgroundColor="@color/green">
                    <LinearLayout
@@ -329,9 +385,9 @@
                    android:layout_width="120dp"
                    android:layout_margin="10dp"
                    app:cardCornerRadius="10dp"
-                   android:id="@+id/room4Btn"
+                   android:id="@+id/R7B03Btn"
                    android:layout_height="120dp"
-                   app:cardBackgroundColor="@color/red">
+                   app:cardBackgroundColor="@color/green">
                    <LinearLayout
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
@@ -347,6 +403,177 @@
                            android:padding="0dp"
                            android:fontFamily="@font/poppins"
                            android:text="7B03"/>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:orientation="horizontal">
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="120dp"
+                   android:layout_margin="10dp"
+                   app:cardCornerRadius="10dp"
+                   android:id="@+id/R7B04Btn"
+                   android:layout_height="120dp"
+                   app:cardBackgroundColor="@color/green">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="vertical"
+                       android:gravity="center"
+                       >
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="15sp"
+                           android:textColor="@color/white"
+                           android:textFontWeight="600"
+                           android:padding="0dp"
+                           android:fontFamily="@font/poppins"
+                           android:text="7B04"/>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+               <androidx.cardview.widget.CardView
+                   android:layout_width="120dp"
+                   android:layout_margin="10dp"
+                   app:cardCornerRadius="10dp"
+                   android:id="@+id/R7B05Btn"
+                   android:layout_height="120dp"
+                   app:cardBackgroundColor="@color/green">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="vertical"
+                       android:gravity="center"
+                       >
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="15sp"
+                           android:textColor="@color/white"
+                           android:textFontWeight="600"
+                           android:padding="0dp"
+                           android:fontFamily="@font/poppins"
+                           android:text="7B05"/>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:orientation="horizontal">
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="120dp"
+                   android:layout_margin="10dp"
+                   app:cardCornerRadius="10dp"
+                   android:id="@+id/R7B06Btn"
+                   android:layout_height="120dp"
+                   app:cardBackgroundColor="@color/green">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="vertical"
+                       android:gravity="center"
+                       >
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="15sp"
+                           android:textColor="@color/white"
+                           android:textFontWeight="600"
+                           android:padding="0dp"
+                           android:fontFamily="@font/poppins"
+                           android:text="7B06"/>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+               <androidx.cardview.widget.CardView
+                   android:layout_width="120dp"
+                   android:layout_margin="10dp"
+                   app:cardCornerRadius="10dp"
+                   android:id="@+id/R7B07Btn"
+                   android:layout_height="120dp"
+                   app:cardBackgroundColor="@color/green">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="vertical"
+                       android:gravity="center"
+                       >
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="15sp"
+                           android:textColor="@color/white"
+                           android:textFontWeight="600"
+                           android:padding="0dp"
+                           android:fontFamily="@font/poppins"
+                           android:text="7B07"/>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:orientation="horizontal">
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="120dp"
+                   android:layout_margin="10dp"
+                   app:cardCornerRadius="10dp"
+                   android:id="@+id/R7C06Btn"
+                   android:layout_height="120dp"
+                   app:cardBackgroundColor="@color/green">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="vertical"
+                       android:gravity="center"
+                       >
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="15sp"
+                           android:textColor="@color/white"
+                           android:textFontWeight="600"
+                           android:padding="0dp"
+                           android:fontFamily="@font/poppins"
+                           android:text="7C06"/>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+               <androidx.cardview.widget.CardView
+                   android:layout_width="120dp"
+                   android:layout_margin="10dp"
+                   app:cardCornerRadius="10dp"
+                   android:id="@+id/R7C07Btn"
+                   android:layout_height="120dp"
+                   app:cardBackgroundColor="@color/green">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="vertical"
+                       android:gravity="center"
+                       >
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="15sp"
+                           android:textColor="@color/white"
+                           android:textFontWeight="600"
+                           android:padding="0dp"
+                           android:fontFamily="@font/poppins"
+                           android:text="7C07"/>
                    </LinearLayout>
                </androidx.cardview.widget.CardView>
 
