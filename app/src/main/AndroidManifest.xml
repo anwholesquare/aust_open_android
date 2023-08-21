@@ -16,6 +16,15 @@
         android:theme="@style/Theme.AUSTOPEN"
         tools:targetApi="31">
         <activity
+            android:name=".RequestEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BeAnEditorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyAccountActivity"
+            android:exported="false" />
+        <activity
             android:name=".AcademicCalender"
             android:exported="false" />
         <activity
