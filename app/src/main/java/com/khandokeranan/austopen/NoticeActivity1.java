@@ -105,8 +105,8 @@ public class NoticeActivity1 extends AppCompatActivity {
                     // Make the HTTPS request
                     Response response = client.newCall(request).execute();
                     String htmlContent = response.body().string();
-                    //System.out.println("Contents: ");
-                    //System.out.println(htmlContent);
+                    System.out.println("Contents: ");
+                    System.out.println(htmlContent);
                     doc = Jsoup.parse(htmlContent);
 
 
@@ -179,7 +179,7 @@ public class NoticeActivity1 extends AppCompatActivity {
 
     public void fetchDataFromUrl(String url) {
         try {
-            Document doc = Jsoup.connect(url).followRedirects(true).get();
+            Document doc = Jsoup.connect(url).get();
 
             Log.d("anan-log", doc.title());
             int numNotices = doc.getElementsByClass("col-9 notice_text").size();
