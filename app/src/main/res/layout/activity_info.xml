@@ -140,7 +140,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/infoBtn"
+            android:id="@+id/AUSTResearchBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -206,6 +206,7 @@
         android:gravity="center"
         >
         <androidx.cardview.widget.CardView
+
             android:layout_width="120dp"
             android:layout_marginVertical="10dp"
             android:layout_marginRight="10dp"
