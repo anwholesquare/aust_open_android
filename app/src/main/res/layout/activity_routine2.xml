@@ -72,6 +72,8 @@
                         android:id="@+id/routineTitle"
                         >
                     </TextView>
+
+
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -83,6 +85,7 @@
                         android:id="@+id/routineImage"
                         android:adjustViewBounds="true"
                         />
+
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -97,23 +100,22 @@
                         android:layout_height="45dp"
                         app:cardBackgroundColor="@color/green"
                         app:cardCornerRadius="50dp"
-                        android:id="@+id/checkButton"
+                        android:id="@+id/subscribeButton"
                         >
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            >
+                            android:gravity="center">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="SUBSCRIBE"
-                                android:textSize="13sp"
-                                android:textFontWeight="600"
-                                android:textColor="@color/white"
                                 android:gravity="center"
-                                >
-                            </TextView>
+                                android:text="SUBSCRIBE"
+                                android:textColor="@color/white"
+                                android:textFontWeight="600"
+                                android:textSize="13sp"></TextView>
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>

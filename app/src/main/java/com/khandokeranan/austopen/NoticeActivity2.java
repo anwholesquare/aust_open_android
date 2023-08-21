@@ -57,7 +57,7 @@ public class NoticeActivity2 extends AppCompatActivity {
                 }
 
                 Element pdfElement = doc.getElementsByTag("iframe").first();
-                Log.d("anan-log", pdfElement.attr("src"));
+                //Log.d("anan-log", pdfElement.attr("src"));
 
                 runOnUiThread(new Runnable() {
 

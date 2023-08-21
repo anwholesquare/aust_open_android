@@ -1,10 +1,15 @@
 package com.khandokeranan.austopen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.ScaleGestureDetector;
 import android.view.View;
@@ -12,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.graphics.Matrix;
 import android.view.MotionEvent;
+import android.widget.Toast;
 
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -112,12 +118,43 @@ public class RoutineActivity2 extends AppCompatActivity {
                 binding.routineImage.setRotation(90);
             }).addOnFailureListener(exception -> {
                 binding.warningText.setText("No Routine Found. Please contact with your class representative.");
+                Toast.makeText(this,"Routine Not Found", Toast.LENGTH_LONG);
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        finish(); // This will close the current activity and return to the previous activity
+                    }
+                }, 5000);
+
 
             });
         } catch (IOException e) {
             Log.d("habib", "onCreateFail: " + e.getMessage());
         }
 
+
+        CardView subscribeButton = (CardView) findViewById(R.id.subscribeButton);
+        subscribeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deptVal = getIntent().getStringExtra("deptVal");
+                yearVal = getIntent().getStringExtra("yearVal");
+                semVal = getIntent().getStringExtra("semVal");
+                secVal = getIntent().getStringExtra("secVal");
+
+                SharedPreferences sharedPreferences = getSharedPreferences("AUSTOPEN", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("deptVal", deptVal);
+                editor.putString("yearVal", yearVal);
+                editor.putString("semVal",  semVal);
+                editor.putString("secVal",  secVal);
+                editor.apply();
+
+                Intent intent = new Intent(getApplicationContext(), RoutineActivity1.class);
+                startActivity(intent);
+            }
+        });
     }
     private class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         @Override

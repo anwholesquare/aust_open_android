@@ -262,6 +262,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:id="@+id/subsLayout"
                 android:orientation="vertical">
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -285,6 +286,7 @@
                             android:textSize="18sp"
                             android:textFontWeight="600"
                             android:textColor="@color/black"
+                            android:id="@+id/subsText"
                             android:layout_marginBottom="10dp"
                             ></TextView>
                         <androidx.cardview.widget.CardView
@@ -293,6 +295,7 @@
                             app:cardBackgroundColor="@color/green"
                             app:cardCornerRadius="50dp"
                             android:layout_marginTop="5dp"
+                            android:id="@+id/unsubBtn"
                             android:layout_marginBottom="20dp"
                             >
                             <LinearLayout
