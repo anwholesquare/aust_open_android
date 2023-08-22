@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AUSTOPEN"
         tools:targetApi="31">
         <activity
+            android:name=".RoutineInputActivity"
+            android:exported="false" />
+        <activity
             android:name=".RequestEditActivity"
             android:exported="false" />
         <activity

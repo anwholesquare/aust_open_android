@@ -10,6 +10,8 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class RequestEditActivity extends AppCompatActivity {
 
     @Override
@@ -19,16 +21,18 @@ public class RequestEditActivity extends AppCompatActivity {
 
         CardView signInBtn = (CardView) findViewById(R.id.signInButton);
         signInBtn.setOnClickListener(v -> {
-            EditText username = (EditText) findViewById(R.id.usernameEditText);
-            EditText password = (EditText) findViewById(R.id.passwordEditText);
+            TextInputEditText username = (TextInputEditText) findViewById(R.id.usernameEditText);
+            TextInputEditText password = (TextInputEditText) findViewById(R.id.passwordEditText);
             String usernameStr = username.getText().toString();
             String passwordStr = password.getText().toString();
             if(usernameStr.isEmpty()||passwordStr.isEmpty()){
                 Toast.makeText(getApplicationContext(),"Please enter your username and password",Toast.LENGTH_SHORT).show();
             }
             else{
-                String url = "https://khandokeranan.com/aust/login.php?user="+usernameStr+"&pass="+passwordStr;
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                String url = "https://khandokeranan.com/aust/index.php?user="+usernameStr+"&pass="+passwordStr;
+
+                Intent intent = new Intent(getApplicationContext(), RoutineInputActivity.class);
+                intent.putExtra("weblink", url);
                 startActivity(intent);
             }
         });

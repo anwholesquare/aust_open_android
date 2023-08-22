@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,8 +16,16 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 public class BeAnEditorActivity extends AppCompatActivity {
-    String deptVal, yearVal, semVal, secVal,finderVal;
+    String deptVal, yearVal, semVal, secVal,finderVal, submitUrl;
     FirebaseUser user;
 
     @Override
@@ -34,19 +43,9 @@ public class BeAnEditorActivity extends AppCompatActivity {
 
 
         CardView submissionCard = (CardView) findViewById(R.id.submissionButton);
-submissionCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText editText = (EditText) findViewById(R.id.requestRoleText);
-                String requestRole = editText.getText().toString();
 
-                if(deptVal == null || yearVal == null || semVal == null || secVal == null || requestRole.isEmpty()){
-                    Toast.makeText(getApplicationContext(), "Please fill all the fields", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                Toast.makeText(getApplicationContext(), "We received your request. Get back to you soon!", Toast.LENGTH_SHORT).show();
-            }
-        });
+
+
 
 
 
@@ -124,6 +123,60 @@ submissionCard.setOnClickListener(new View.OnClickListener() {
                 finderVal = groupText.getText().toString();
             }
 
+        });
+
+
+        submissionCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText editText = (EditText) findViewById(R.id.requestRoleText);
+                String requestRole = editText.getText().toString();
+
+                if(deptVal == null || yearVal == null || semVal == null || secVal == null || requestRole.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Please fill all the fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                submitUrl = "https://khandokeranan.com/aust/apis/requester.php?";
+                String encodeName = user.getDisplayName();
+                try {
+                    encodeName = URLEncoder.encode(encodeName, "UTF-8");
+                } catch (UnsupportedEncodingException e) {
+                    throw new RuntimeException(e);
+                }
+                String encodedUrl = "fname="+encodeName+"&email="+user.getEmail()+"&department="+deptVal +"&year="+yearVal+"&semester="+semVal+"&section="+secVal+"&group_no="+groupText.getText()+"&role="+requestRole;
+                submitUrl += encodedUrl;
+                Log.d("323232", submitUrl);
+
+
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            OkHttpClient client = new OkHttpClient();
+                            Request request = new Request.Builder()
+                                    .url(submitUrl)
+                                    .build();
+
+                            Response response = client.newCall(request).execute();
+
+
+
+                        } catch (IOException e) {
+                            System.out.println("error");
+                            System.out.println(e.toString());
+                        }
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+
+                            }
+                        });
+                    }
+                }).start();
+
+                Toast.makeText(getApplicationContext(), "We received your request. Get back to you soon!", Toast.LENGTH_SHORT).show();
+            }
         });
 
 
