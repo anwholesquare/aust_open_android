@@ -20,9 +20,10 @@ targeting Android 6.0 Marshmallow (API level 23) or higher.
 <table>
 <tr>
     <td><img src="https://raw.githubusercontent.com/anwholesquare/aust_open_android/main/homepage.png" width="200px"></td>
-    <td><img src="https://raw.githubusercontent.com/anwholesquare/aust_open_android/main/vacantpage1.png" width="200px"></td>
     <td><img src="https://raw.githubusercontent.com/anwholesquare/aust_open_android/main/vacantpage2.png" width="200px"></td>
     <td><img src="https://raw.githubusercontent.com/anwholesquare/aust_open_android/main/informationpage.png" width="200px"></td>
+</tr>
+<tr>
     <td><img src="https://raw.githubusercontent.com/anwholesquare/aust_open_android/main/noticepage.png" width="200px"></td>
     <td><img src="https://raw.githubusercontent.com/anwholesquare/aust_open_android/main/routinepage.png" width="200px"></td>
     <td><img src="https://raw.githubusercontent.com/anwholesquare/aust_open_android/main/teacherpage.png" width="200px"></td>
