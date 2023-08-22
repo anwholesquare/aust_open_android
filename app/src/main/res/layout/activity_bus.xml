@@ -75,6 +75,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
+                    android:id="@+id/surmaBtn"
                     android:layout_height="60dp"
                     android:paddingVertical="10dp"
                     app:cardBackgroundColor="#FFE8E8E8"
@@ -114,6 +115,7 @@
                 android:layout_marginVertical="10dp">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/meghnaBtn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:paddingVertical="10dp"
@@ -154,6 +156,7 @@
                 android:layout_marginVertical="10dp">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/jamunaBtn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:paddingVertical="10dp"
@@ -194,6 +197,7 @@
                 android:layout_marginVertical="10dp">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/kornofuliBtn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:paddingVertical="10dp"
